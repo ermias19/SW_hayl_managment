@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+openssl = "*"
+wtforms = "==2.3.3"
+flask-sqlalchemy = "==2.5.1"
+Flask = "==1.1.2"
+Flask-WTF = "==0.14.3"
+SQLAlchemy = "==1.4.5"
+Pillow = "==8.2.0"
+secrets = "==1.0.2"
+gunicorn = "*"
+flask = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
