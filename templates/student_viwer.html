@@ -1,0 +1,165 @@
+{%extends 'layout.html'%}
+
+{%block content %}
+<link rel="stylesheet" href="../static/templatemo-style.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+<form action="" method="post">
+    {{ forms.hidden_tag() }}
+   
+<header class="nav-down responsive-nav hidden-lg hidden-md">
+           
+            <!--/.navbar-header-->
+            <div id="main-nav" class="collapse navbar-collapse">
+               
+                   
+
+               
+                <nav>
+                    <ul class="nav navbar-nav">
+                        <li><a href="#top"></a></li>
+                        <li><a href="#featured">ሰንበት ተማሪ ስም ዝርዝር</a></li>
+                        <li><a href="#projects">አለማዊ ስራ ድርሻ</a></li>
+                        <li><a href="#video">Presentation</a></li>
+                        <li><a href="#blog">የኣገልጋይ ብዛት</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+       
+        <div class=" container row ">
+        <div class="  sidebar-navigation hidde-sm hidden-xs">
+            <div class="logo">
+                <img src="../static/main_pic_up.png" class="img-fluid" alt="Responsive image">
+              
+            </div>
+           
+            <nav>
+                <ul>
+                    <li>
+                        <button style="border: none;" class="btn btn-outline-dark" name="general_info" value="clicked" >
+                            <span class="rect"></span>
+                            <span class="circle"></span>
+                            ሰንበት ተማሪ ስም ዝርዝር
+                        </button>
+                    </li>
+                    <li>
+                        <button style="border: none;" class="btn btn-outline-dark" name="agelgay_room" value="clicked">
+                            <span class="rect"></span>
+                            <span class="circle"></span>
+                            የኣገልጋይ ክፍል
+                        </button>
+                    </li>
+                    <li>
+                        <button style="border: none;" class="btn btn-outline-dark"  name="carrer" value="clicked">
+                            <span class="rect"></span>
+                            <span class="circle"></span>
+                            አለማዊ ስራ ድርሻ
+                        </button>
+                    </li>
+                    <li>
+                        <button style="border: none;" class="btn btn-outline-dark">
+                            <span class="rect"></span>
+                            <span class="circle"></span>
+                            የኣገልጋይ ብዛት
+                        </button>
+                    </li>
+                   
+                </ul>
+            </nav>
+            <ul class="social-icons">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                <li><a href="#"><i class="fa fa-behance"></i></a></li>
+            </ul>
+        </div>
+        <div class="col-md-5">
+            
+                      {%if general_info_check==True%}
+                      <table class="table-warning"  style="width:65rem;">
+                        <thead>
+                            <tr>
+                      <th >ተራ ቁጥር</th>
+                      <th >ስም</th>
+                      <th >የአባት ስም</th>
+                      <th >የአያት ስም</th>
+                      <th >ክርስትና</th>
+                      <th >ፆታ</th>
+                      <th >የእናት ስም</th>
+                      <th >የትውልድ ዘመን</th>
+                      <th >ማዕረግ</th>
+                      <th >ሰበካ ጉባኤ</th>
+                      <th >ክ/ከተማ</th>
+                      <th >ቀበሌ</th>
+                      <th >ወረዳ</th>
+                      <th >ስልክ </th>
+                      <th >ልዩ ቦታ</th>
+                      <th >የቤት ቁጥር</th>
+                      <th >ሞባይል</th>
+                      <th >ፖስታ</th>
+                      <th >የትዳር ሁኔታ</th>
+                    </tr>
+                    {%endif%}
+                        {%if agelgay==True%}
+                        <table class="table-warning"  style="width:65rem;">
+                            <thead>
+                                <tr>
+                      <th >ተራ ቁጥር</th>
+                      <th >ስም</th>
+                      <th >የአባት ስም</th>
+                      <th >የስራ ሁኔታ</th>
+                      <th >አባል ዓ.ም</th>
+                      <th >የኮርስ ዙር</th>
+                      <th >ክፍል ስም</th>
+                      <th >የጀመሉበት ዓ.ም</th>
+                      <th >የስራ ድርሻ</th>
+                    </tr>
+                    {%endif%}
+                    {%if carrer==True%}
+                    <table class="table-warning"  style="width:65rem;">
+                        <thead>
+                            <tr>
+                    <th >ተራ ቁጥር</th>
+                      <th >ስም</th>
+                      <th >የአባት ስም</th>
+                      <th>email</th>
+                      <th>carrer</th>
+                      </tr>
+                    {%endif%}
+                   
+                  </thead>
+                  <tbody>
+                    
+                      {%for i in general_info%}
+                      <tr>
+                         
+                      {%for j in i%}    
+                      <td> {{j}} </td> 
+                      
+                      {%endfor%}
+                     
+                    </tr>
+                    {%endfor%}
+                       
+                   
+                    
+                    
+                  </tbody>
+
+
+            </table>
+       
+    </div>
+    </div>
+        <!-- navigation ends -->
+
+     
+           
+       
+
+</form>
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    
+{%endblock%}

@@ -1,0 +1,60 @@
+.navbar-brand>img{
+    max-width: 40%; 
+    border-radius: 5rem; 
+}
+.container-fluid{
+   border-radius: 5rem;
+}
+body{
+    background-color: rgb(234, 245, 86);
+}
+.greet_1{
+    padding-left: 20rem;
+}
+.greet_2{
+    padding-left: 10rem;
+    padding-right: 7rem;
+    
+
+}
+.form-check{
+    padding-left: 3rem;
+}
+/* .sebeka_check{
+    
+} */
+
+.image_label{
+    background-color: white;
+    width:10rem;
+    height: 10rem;
+    margin-left: 33rem;
+}
+#table_1{
+      pointer-events: none;
+      opacity: 0.6;
+      background: rgba(200, 54, 54, 0.5);  
+      background-color: rgb(234, 245, 86);
+      filter: alpha(opacity=50);
+      zoom: 1;  
+     
+    }
+#table_2{
+        pointer-events: none;
+        opacity: 0.6;
+        background: rgba(200, 54, 54, 0.5);  
+        background-color: rgb(234, 245, 86);
+        filter: alpha(opacity=50);
+        zoom: 1;  
+       
+      }
+
+#table_3{
+        pointer-events: none;
+        opacity: 0.6;
+        background: rgba(200, 54, 54, 0.5);  
+        background-color: rgb(234, 245, 86);
+        filter: alpha(opacity=50);
+        zoom: 1;  
+       
+      }

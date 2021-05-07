@@ -1,0 +1,339 @@
+{%extends 'layout.html'%}
+{%block content%}
+<div class="student_form">
+            <form class="row g-3" method="POST" action="" enctype="multipart/form-data">
+              {{ forms.hidden_tag() }}
+            <img src="{{image_file}}" alt="">  
+             <div class="col-md-12">
+              {{forms.picture.label()}}
+              {{forms.picture}}
+              {{forms.submit}}
+              <!-- {{forms.stud_code.label}}{{forms.stud_code}} -->
+            </div>
+            <div class="col-md-4">
+              {{forms.stud_code.label(for="input_last_name", class="form-label")}}
+              {{forms.stud_code(id="first_name", type="name" ,class="form-control" ,id="inputname")}}
+  
+               
+            </div>
+           
+                <div class="col-md-4">
+                      {{forms.username.label(for="input_last_name", class="form-label")}}
+                      {{forms.username(id="first_name", type="name" ,class="form-control" ,id="inputname")}}
+                  </div>
+                <div class="col-md-4">
+                  {{forms.fathername.label(for="input_last_name", class="form-label")}}
+                  {{forms.fathername(id="first_name", type="name" ,class="form-control" ,id="inputname")}}
+                </div>
+                <div class="col-md-4">
+                  {{forms.ayatname.label(for="input_last_name", class="form-label")}}
+                  {{forms.ayatname(id="first_name", type="name" ,class="form-control" ,id="inputname")}}
+               </div>
+               <div class="col-md-4">
+                {{forms.christnaname.label(for="input_last_name", class="form-label")}}
+                {{forms.christnaname(id="first_name", type="name" ,class="form-control" ,id="inputname")}}
+             </div>
+             <div class="col-md-4">
+              {{forms.sex.label(for="input_last_name", class="form-label")}}
+              {{forms.sex(id="first_name", type="name" ,class="form-control" ,id="inputname")}}
+           </div>
+           <div class="col-md-4">
+            {{forms.mothername.label(for="input_last_name", class="form-label")}}
+            {{forms.mothername(id="first_name", type="name" ,class="form-control" ,id="inputname")}}
+         </div>
+         <div class="col-md-4">
+          {{forms.dateofbirth.label(for="input_last_name", class="form-label")}}
+          {{forms.dateofbirth(id="first_name", type="name" ,class="form-control" ,id="inputname")}}
+       </div>
+       <div class="col-md-4">
+        {{forms.meareg.label(for="input_last_name", class="form-label")}}
+        {{forms.meareg(id="first_name", type="name" ,class="form-control" ,id="inputname")}}
+     </div>
+     
+     <div class="col-md-5">
+                               
+              <label for="inputname" class="form-label">4.ሰበካ ጉባኤ ኣባል ኖት </label>
+                                <div class="sebeka_check row">
+                                <div class="form-check col-md-6">
+                                  {{forms.sebeka_yes(type="checkbox",class="form-check-input", value="አዎ ነኝ",id="exampleCheck1")}}
+                                  {{forms.sebeka_yes.label( class="form-check-label" ,for="exampleCheck1")}}
+                                 
+                                    <!-- <input id="awo_sebeka_g_awo" class="form-check-input" type="radio" id="gridRadios1" value="option1" checked>
+                                 <label class="form-check-label" for="gridRadios1">አዎ </label> -->
+                                </div>
+                               
+                                <div class="form-check col-md-6">
+                                  {{forms.sebeka_no( type="checkbox" ,class="form-check-input", value="አይ አይደለሁም" ,id="exampleCheck1")}}
+                                  {{forms.sebeka_no.label( class="form-check-label",for="exampleCheck1")}}
+                                   
+                                </div>
+                            </div>
+                            </div>
+                       
+                      </div>
+                        <div class="adress_shower">
+                         
+                         
+                         <label for="">6.የመኖሪያ አድራሻ</label>
+                         <div class="row ermias">
+                      
+                            <div class="col-md-6 row">
+                                
+                                <div class="col-md-2">
+                                  {{forms.kebele.label(for="input_last_name" ,class="form-label")}}
+                                  {{forms.kebele(id="middle_name" ,type="name", class="form-control", id="input_last_name")}}
+                                  
+                              </div>
+                              <div class="col-md-2">
+                                {{forms.kfl_ketema.label(for="input_last_name" ,class="form-label")}}
+                                  {{forms.kfl_ketema(id="middle_name" ,type="name", class="form-control", id="input_last_name")}}
+                                  
+                                </div>
+                                <div class="col-md-2">
+                                  {{forms.wereda.label(for="input_last_name" ,class="form-label")}}
+                                  {{forms.wereda(id="middle_name" ,type="name", class="form-control", id="input_last_name")}}
+                                  
+                                </div>
+                                <div class="col-md-3">
+                                  {{forms.silk_kutr.label(for="input_last_name" ,class="form-label")}}
+                                  {{forms.silk_kutr(id="middle_name" ,type="name", class="form-control", id="input_last_name")}}
+                                  
+                              </div>
+                              <div class="col-md-2">
+                                {{forms.lyu_bota.label(for="input_last_name" ,class="form-label")}}
+                                  {{forms.lyu_bota(id="middle_name" ,type="name", class="form-control", id="input_last_name")}}
+                                
+                            </div>
+                              <!--........................ end of first row.......................................... -->
+                              <div class="col-md-3">
+                                {{forms.home_num.label(for="input_last_name" ,class="form-label")}}
+                                {{forms.home_num(id="middle_name" ,type="name", class="form-control", id="input_last_name")}}
+                                  
+                                </div>
+                                <div class="col-md-3">
+                                  {{forms.cell_phone.label(for="input_last_name" ,class="form-label")}}
+                                  {{forms.cell_phone(id="middle_name" ,type="name", class="form-control", id="input_last_name")}}
+                                 
+                                </div>
+                                <div class="col-md-3">
+                                  {{forms.post.label(for="input_last_name" ,class="form-label")}}
+                                  {{forms.post(id="middle_name" ,type="name", class="form-control", id="input_last_name")}}
+                                  
+                                </div>
+                                <div class="col-md-3">
+                                  {{forms.email.label(for="input_last_name" ,class="form-label")}}
+                                  {{forms.email(id="middle_name" ,type="name", class="form-control", id="input_last_name")}}
+                                  
+                                </div>
+                                
+                              </div>
+                            </div>
+                           
+                          </div>
+                          <!-- end of address -->
+                          <div  class="row g-3">
+                           
+                                <label for="inputname" class="form-label">8.የስራ ሁኔታ</label>
+                                    <div class="form-check col-md-2">
+                                      {{forms.yegel.label()}}
+                                        {{forms.yegel()}}
+                                      
+                                     </div>
+                                      <div class="form-check col-md-2">
+                                        {{forms.mengest.label()}}
+                                        {{forms.mengest()}}
+                                        
+                                      </div>
+                                      <div class="form-check col-md-2">
+                                        {{forms.begel_derejet.label()}}
+                                        {{forms.begel_derejet()}}
+                                        
+                                        
+                                      </div>
+                                      <div class="form-check col-md-2">
+                                        {{forms.felagi.label()}}
+                                        {{forms.felagi()}}
+                                        
+                                      </div>
+                         
+                          </div>
+
+                              <div  class="row g-3">
+                                
+                                    <label for="inputname" class="form-label">9.የትዳር ሁኔታ</label>
+                                        <div class="form-check col-md-3">
+                                            
+                                            {{forms.yageba_ch(type="checkbox" ,class="form-check-input",value="ያገባ/ች" ,id="exampleCheck1")}}
+                                            {{forms.yageba_ch.label(class="form-check-label" ,for="exampleCheck1")}}
+                                            
+                                            
+                                          </div>
+                                          <div class="form-check col-md-3">
+                                            {{forms.yalageba_ch(type="checkbox",value="ያላገባ/ች" ,class="form-check-input" ,id="exampleCheck1")}}
+                                            {{forms.yalageba_ch.label(class="form-check-label" ,for="exampleCheck1")}}
+                                            
+                                            
+                                             
+                                          </div>
+                                          <div class="form-check col-md-3">
+                                            {{forms.ag_yefeta(type="checkbox",value="የፈታች/የሞተበት(ባት)" ,class="form-check-input" ,id="exampleCheck1")}}
+                                            {{forms.ag_yefeta.label(class="form-check-label" ,for="exampleCheck1")}}
+                                            
+                                            
+                                            
+                                          </div>
+                                          
+                             
+                              </div>
+
+                            
+
+
+                              <!-- the forms will end here -->
+            <div class="row">
+                <div class="col-md-12">
+                  {{forms.student_from.label}}{{forms.student_from}}
+                  {{forms.course_round.label}}{{forms.course_round}}
+                 
+                  
+                  {{forms.current_duty.label}}{{forms.current_duty}}
+                  
+                  
+                 </div>
+                  <div class="col-md-12">
+                    {{forms.senbet_duty_form.label}}{{forms.senbet_duty_form}}
+                    {{forms.current_duty_spec.label}}{{forms.current_duty_spec}}
+                   
+                   
+                  </div>
+                
+               
+                 
+                  
+                
+
+                </div>
+            </div>
+          </form>
+            <!-- ...............................................table_1................................................. -->      
+           
+            <button id="address_shower_btn" type="button" class="btn btn-outline-warning">11.ዓለማዊ ትምህርት ደለጃ</button>
+            <table  id="table_1" class="table">
+                
+                <thead>
+                  <tr>
+                    <th scope="col">ተ.ቁ</th>
+                    <th scope="col">ተቋም</th>
+                    <th scope="col">የተመረቁበት ዓ.ም</th>
+                    <th scope="col">የተመረቁበት የሞያ መስክ</th>
+                    <th scope="col">የትምህርት ደረጃ ፲ኛ ዲፕሎማ፣ዲግሪ ደረጃ ፬</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td ><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                  </tr>
+                </tbody>
+              </table>
+            
+                                          <!-- table 2 -->
+              
+              <button id="sene_melekot_btn" type="button" class="btn btn-outline-warning">12.የስነ-መለኮት ደረጃ</button>
+              <table id="table_2" class="table">
+                
+               
+                <thead>
+                  <tr>
+                    <th scope="col">ተ.ቁ</th>
+                    <th scope="col">የመንፈሳዊው ኮሌጁ ስም</th>
+                    <th scope="col">የተመረቁበት ዓ.ም</th>
+                    <th scope="col">ማዕረግ የትምህርት/ደረጃ/ዲግሪ/ዲፕሎማ...</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td ><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td ><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td ><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    
+                  </tr>
+                </tbody>
+              </table>
+              <button id="abinet_btn" type="button" class="btn btn-outline-warning">13. የአብነት ደረጃ</button>
+              
+              <table id="table_3" class="table">
+               
+              
+                <thead id="ermias" >
+                  <tr>
+                    <th scope="col">ተ.ቁ</th>
+                    <th scope="col">ውዳሴ ማሪያም/ዳዊት</th>
+                    <th scope="col">ዜማ/ጓዝ</th>
+                    <th scope="col">ድጓ/ጓዝ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td ><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                   
+                  <tr>
+                    <th scope="row">2</th>
+                    <td ><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                   
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td ><input type="text"></td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                    
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+             
+           
+
+ 
+  </div>
+    </div>
+   
+{%endblock content%}
