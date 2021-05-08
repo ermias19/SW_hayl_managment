@@ -7,7 +7,7 @@ from PIL import Image
 import secrets
 from stud_input import from_name_khnet 
 import sqlalchemy
-
+import secrets
 
 
 
