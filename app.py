@@ -1,7 +1,7 @@
 import os
 from flask import Flask ,render_template,request , url_for ,session ,redirect
 from add_stud_form import AddstudentForm ,Login
-
+from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine, Table, MetaData
 from PIL import Image
 

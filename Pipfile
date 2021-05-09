@@ -92,6 +92,7 @@ xkcdpass = "==1.19.0"
 yamlreader = "==3.0.4"
 zipp = "==3.4.1"
 flask-wtf = "*"
+flask-sqlalchemy = "*"
 
 [dev-packages]
 
