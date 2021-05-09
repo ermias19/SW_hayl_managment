@@ -133,5 +133,6 @@ def save_picture(form_picture):
 
     return picture_fn
 
+
 if __name__ == '__main__':
     app.run(debug=True)
