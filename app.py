@@ -4,7 +4,7 @@ from add_stud_form import AddstudentForm ,Login
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine, Table, MetaData
 from PIL import Image
-
+import secrets
 from stud_input import from_name_khnet 
 import sqlalchemy
 
