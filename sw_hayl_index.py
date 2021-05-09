@@ -111,21 +111,8 @@ def student_viewer():
         if request.form.get('carrer') == 'clicked':
             carrer=True
             general_info=db.execute("select stud_code,first_name,last_name,email,carrer from student_info").fetchall()
-
-
-
-   
-    # for i in general_info:
-    #     for j in i:
-    #         print(j,end=" ")
-    #     print("\n")
-        
-        
-    #    select stud_code,carrer from student_info
-    # print(general_info)
-
-    
-    username=session["username"]
+            
+            username=session["username"]
   
     return render_template('student_viwer.html' ,forms=forms,search=search,username=username,general_info=general_info,general_info_button=general_info_button,general_info_check=general_info_check,agelgay=agelgay,carrer=carrer)
 
