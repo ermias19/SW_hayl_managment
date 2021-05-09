@@ -1,1 +1,1 @@
-web: gunicorn app:sw_hayl_indexs
+web: gunicorn app:app
