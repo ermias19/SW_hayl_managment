@@ -25,7 +25,7 @@ app.config['MAIL_USE_TLS']=True
 app.config['MAIL_USE_SSL'] = False
 app.config['MAIL_USERNAME']='swhayl19@gmail.com'
 app.config['MAIL_PASSWORD']='swhaylsenbet'
-app.run(threaded=True)
+
 mail=Mail(app)
 
 
