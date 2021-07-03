@@ -1,4 +1,7 @@
+
 from add_stud_form import AddstudentForm
+from datetime import datetime
+
 def from_name_khnet():
     input_data=AddstudentForm()
     stud_code=input_data.stud_code.data
@@ -8,7 +11,7 @@ def from_name_khnet():
     christnaname=input_data.christnaname.data
     sex=input_data.sex.data
     mothername=input_data.mothername.data
-    dateofbirth=input_data.dateofbirth.data
+    dateof_birth=input_data.dateof_birth.data
     meareg=input_data.meareg.data
 
 
@@ -18,7 +21,6 @@ def from_name_khnet():
     kebele=input_data.kebele.data
     kfl_ketema=input_data.kfl_ketema.data
     wereda=input_data.wereda.data
-    silk_kutr=input_data.silk_kutr.data
     lyu_bota=input_data.lyu_bota.data
     home_num=input_data.home_num.data
     cell_phone=input_data.cell_phone.data
@@ -28,7 +30,7 @@ def from_name_khnet():
      
     yegel=input_data.yegel.data
     mengest=input_data.mengest.data
-    begel_derejet=input_data.begel_derejet.data
+
     felagi=input_data.felagi.data
 
     yageba_ch=input_data.yageba_ch.data
@@ -41,7 +43,7 @@ def from_name_khnet():
     senbet_duty_form=input_data.senbet_duty_form.data
     current_duty_spec=input_data.current_duty_spec.data
 
-    return stud_code,first_name ,last_name ,middle_name ,christnaname ,sex ,mothername ,dateofbirth ,meareg ,sebeka_yes,sebeka_no,kebele,kfl_ketema,wereda,silk_kutr,lyu_bota,home_num,cell_phone,post,email ,yegel,mengest,begel_derejet,felagi, yageba_ch,yalageba_ch,ag_yefeta ,student_from ,course_round ,current_duty ,senbet_duty_form ,current_duty_spec
+    return stud_code,first_name ,last_name ,middle_name ,christnaname ,sex ,mothername,dateof_birth ,meareg ,sebeka_yes,sebeka_no,kebele,kfl_ketema,wereda,lyu_bota,home_num,cell_phone,post,email ,yegel,mengest,felagi, yageba_ch,yalageba_ch,ag_yefeta ,student_from ,course_round ,current_duty ,senbet_duty_form ,current_duty_spec
 
 
 

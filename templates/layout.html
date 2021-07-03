@@ -1,12 +1,12 @@
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
   <head>
     <title>ሰው ሃይል አስተዳደር መተግበሪያ</title>
-    <!-- Required meta tags -->
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+   
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -14,7 +14,7 @@
   </head>
   <b>
       
-    <!-- nav component -->
+    
  
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
@@ -57,22 +57,227 @@
         </div>
       </div>
     </nav>
-    <!-- end nav bar -->
+   
     {%if desc==true %}
     <div class="main_gate">
       <div class="greet_1"><h3>በሰመአብ ወወልድ ወመንፈስቅዱስ  አሐዱ አምላክ አሜን።</h3></div>
       <div class="greet_2" ><h3>በኢትዮጲያ ኦርቶዶክስ ተዋህዶ ቤተክርስቲያን በአዲስ ኣበባ ሀገረስብክት የጎፋ መካነ ህያዋን ቅዱስ ገብርኤል ካቴድራል ሰንበት ትቤት የሰው ሃይል አስተዳደር ናዑስ ክፍል።</h3></div>
       {%endif%}
     </div>
-    {%block content%}
-      {%endblock content%}
+    
 
 
       
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
     <script src="../static/javascript/control.js" type="module"></script>
   </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- student_list_viwer cdn's -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+  
+
+
+ 
+
+
+  <!-- student list viewr cnd's ends -->
+  <!-- login css starts -->
+  <link rel="stylesheet" type="text/css" href="../static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/main.css">
+  <!-- login css ends' -->
+  
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>ሰው ሃይል አስተዳደር መተግበሪያ</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/aos/aos.css/main.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/boxicons/css/boxicons.min.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/glightbox/css/glightbox.min.css') }}"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}"> -->
+
+  <!-- <link href="../static/vendor/aos/aos.css" rel="stylesheet"> -->
+  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <!-- <link href="../static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet"> -->
+  <!-- <link href="../static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"> -->
+
+  <!-- Template Main CSS File -->
+  <!-- <link href="../static/main.css" rel="stylesheet"> -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+ 
+
+  <!-- =======================================================
+  * Template Name: Day - v4.3.0
+  * Template URL: https://bootstrapmade.com/day-multipurpose-html-template-for-free/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div style="margin:auto"> <h4> በሰመአብ ወወልድ ወመንፈስቅዱስ  አሐዱ አምላክ አሜን።</h4></div>
+      <!-- <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">info@example.com</a>
+        <i class="bi bi-phone-fill phone-icon"></i> +1 5589 55488 55
+      </div>
+     -->
+     
+    </div>
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div><h1 class="logo"><a href={{url_for('home')}}><img src="../static/main_pic_up.png" alt="" style="border:solid; border-radius:2rem "></a></h1></div>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href={{url_for('home')}}>መግቢያ</a></li>
+          <li><a class="nav-link scrollto" href={{url_for('login')}}>ተቆጣጣሪ ገፅ</a></li>
+         
+          
+          
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+  {%block content%}
+  <!-- all content will render in here -->
+  {%endblock content%}
+
+  
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>ሰው ሃይል ኣስተዳደር</h3>
+              <p>
+                ጎፋ ገብርኤል ካቴድራል ሰንበት ትምህርት ቤት <br>
+                ጎፋ ማዞሪያ<br><br>
+                <strong>Phone:</strong> +2511554477<br>
+                <strong>Email:</strong> swhayl19@gmail.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>ስው ሃይል አስተዳደር ገፅ</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">ሰው ሃይል መግቢያ</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">ስው ሃይል ተቆጣጣሪ ገፅ</a></li>
+              
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>ኣገልግሎታችን</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">ኣባላትን ወደ ክፍላት መመደብ</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">የኣባላት መረጃ መያዝ</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">የውጭ አገልግሎት መቆጣጠር</a></li>
+              
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>መልዕክት</h4>
+            <p>በተደራጀ የሰው ሃይል ሰንበት ትምህርት ቤታችን ወደላቀ ደረጃ የማድረስ የሁላችን ሃላፊነት ነው!</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Day</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/day-multipurpose-html-template-for-free/ -->
+        Designed by <a href="https://bootstrapmade.com/">D/n Ermias mulugeta</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="../static/vendor/aos/aos.js"></script>
+  <script src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/glightbox/js/glightbox.min.js"></script>
+  <script src="../static/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../static/php-email-form/validate.js"></script>
+  <script src="../static/swiper/swiper-bundle.min.js"></script>
+
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+  <script src="../static/javascript/main.js" ></script>
+  
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
+
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+
+ 
+ 
+  
+
+  
+  
+
+</body>
+
 </html>
