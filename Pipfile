@@ -94,6 +94,7 @@ zipp = "==3.4.1"
 flask-wtf = "*"
 flask-sqlalchemy = "*"
 pillow = "*"
+flask-mail = "*"
 
 [dev-packages]
 
