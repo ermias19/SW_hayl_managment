@@ -231,8 +231,11 @@ body {
   #header.fixed-top {
     background: #191919;
   }
-  
+  ul{
+    margin-top:20px;
+  }
   #header .logo {
+    
     font-size: 30px;
     margin: 0;
     padding: 0;

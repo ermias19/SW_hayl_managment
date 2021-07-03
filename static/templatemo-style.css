@@ -1,5 +1,5 @@
 .navbar-toggle {
-  position: absolute;
+  
   top: 40%;
   left: 50%;
   display: inline-block;
@@ -13,14 +13,16 @@
 
 
 #main-nav ul {
-  text-align: center;
+  
   background-color: rgba(0,0,0,0.9);
-  margin-top: 59px;
-  width: 100%;
+  
+  
+
 }
-#main-nav ul li {
-  margin: 15px 0px;
+.ermias{
+  margin-top:50px;
 }
+
 #main-nav ul li:hover {
   background-color: transparent;
 }
@@ -45,10 +47,10 @@
 /* Sidebar Style */
 
 .sidebar-navigation {
-  width: 22.5%;
+  width: 100%;
   float: left;
   height: 100%;
-  position: fixed;
+  position: inherit;
   background-color: #F8DF51;
   z-index: 10;
   margin-top: 2px;
@@ -57,8 +59,8 @@
 }
 
 .sidebar-navigation .logo {
-  position: absolute;
-  width: 100%;
+  
+  width: inherit;
   height: 140px;
   line-height: 100px;
   background-color: #45489a;
@@ -107,7 +109,7 @@
   display: inline-block;
   position:relative;
 }
-.sidebar-navigation nav a{
+.sidebar-navigation  a{
   display: inline-block;
   color: black;
   margin-top: 5px;
@@ -124,13 +126,13 @@
 .sidebar-navigation nav a:hover, nav .active-section {
   color: #fff;
 }
-.sidebar-navigation nav a:hover span, nav .active-section span{
+.sidebar-navigation nav a:hover span, .active-section span{
   background-color: #ddd;
 }
 .sidebar-navigation nav .active-section .rect{
   width: 30px;
 }
-.sidebar-navigation nav .active-section .circle{
+.sidebar-navigation  .active-section .circle{
   background-color: #fff;
 }
 
