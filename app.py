@@ -47,10 +47,10 @@ def ermias():
 
 @app.route("/", methods=['GET', 'POST'])
 def home():
-    # desc=True
+    desc=True
    
     
-    return('<h2>ermias</h2>')
+    return render_template('home.html',desc=desc)
 
 
 @app.route("/add_student", methods=['GET', 'POST'])
