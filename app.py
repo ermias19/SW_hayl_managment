@@ -50,7 +50,7 @@ def home():
     # desc=True
    
     
-    return render_template('home.html')
+    return('<h2>ermias</h2>')
 
 
 @app.route("/add_student", methods=['GET', 'POST'])
